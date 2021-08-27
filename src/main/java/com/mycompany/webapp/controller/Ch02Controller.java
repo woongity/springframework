@@ -3,6 +3,9 @@ package com.mycompany.webapp.controller;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -18,8 +21,23 @@ public class Ch02Controller {
 		logger.info("실행");
 		return "ch02/content";
 	}
-	@RequestMapping(value="/method1",method=RequestMethod.GET)
+	@RequestMapping(value="/method",method=RequestMethod.GET)
 	public String method1() {
 		return "redirect:/ch02/content";
 	}
+	@GetMapping("/method")
+	public String method2() {
+		return "redirect:/ch02/content";
+	}
+	
+	@PutMapping("/method")
+	public String method3() {
+		return "redirect:/ch02/content";
+	}
+	@DeleteMapping("/method")
+	public String method4() {
+		return "redirect:/ch02/content";
+	}
+	
+	
 }
