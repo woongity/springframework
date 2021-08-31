@@ -34,21 +34,30 @@ public class Ch04Controller {
 		return "redirect:/ch04/content";
 	}
 	
-	@InitBinder("joinForm")
+	@InitBinder("loinForm")
 	public void joinFormSetValidate(WebDataBinder binder) {
 		logger.info("실행");
-		
+//		binder.setValidator(new Ch04MemberJoinFormValidator());
+		binder.addValidators(
+			new Ch04MemberIdValidator(),
+			new Ch04MemberEmailValidator(),
+			new Ch04MemberTelValidator(),
+			new Ch04MemberPasswordValidator()
+		);
+	}
+	
+	@InitBinder("joinForm")
+	public void loginFormSetValidate(WebDataBinder binder) {
+		logger.info("실행");
 //		binder.setValidator(new Ch04MemberJoinFormValidator());
 		
 		binder.addValidators(
 			new Ch04MemberIdValidator(),
-			new Ch04MemberPasswordValidator(),
-			new Ch04MemberEmailValidator(),
-			new Ch04MemberTelValidator()
+			new Ch04MemberPasswordValidator()
 		);
 	}
 	
-	@PostMapping("/method2")
+	@PostMapping("/join")
 	public String join(@ModelAttribute("joinForm") @Valid Ch04Member member, Errors errors) { // BindingResult bidingResult) {
 		logger.info("실행");
 		if(errors.hasErrors()) { // errors 안에 에러 정보가 있는가(에러가 발생했는가)
@@ -57,5 +66,15 @@ public class Ch04Controller {
 		}
 		logger.info("정상 요청 처리후 응답 제공");
 		return "redirect:/ch04/content";
+	}
+	
+	@PostMapping("/login")
+	public String login(@ModelAttribute("loginForm") @Valid Ch04Member member, Errors errors) {
+		if(errors.hasErrors()) { // errors 안에 에러 정보가 있는가(에러가 발생했는가)
+			logger.info("다시 입력폼 제공 + 에러 메시지");
+			return "ch04/content";
+		}
+		logger.info("정상 요청 처리후 응답 제공");
+		return "redirect:/";
 	}
 }
