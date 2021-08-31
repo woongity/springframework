@@ -15,4 +15,9 @@
 			<span class="mr-2">Ch03.</span> <a class="text-warning" href="/ch03/content">controller/request parameter</a>
 		</h6>
 	</li>
+	<li class="nav-item mb-2">
+		<h6 class="text-white">
+			<span class="mr-2">Ch04.</span> <a class="text-warning" href="/ch04/content">Validation</a>
+		</h6>
+	</li>
 </ul>
