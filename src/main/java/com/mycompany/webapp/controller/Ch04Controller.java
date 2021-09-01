@@ -77,4 +77,5 @@ public class Ch04Controller {
 		logger.info("정상 요청 처리후 응답 제공");
 		return "redirect:/";
 	}
+	
 }
