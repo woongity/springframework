@@ -25,4 +25,9 @@
 			<span class="mr-2">Ch05.</span> <a class="text-warning" href="/ch05/content">Controller/Header & Cookie </a>
 		</h6>
 	</li>
+	<li class="nav-item mb-2">
+		<h6 class="text-white">
+			<span class="mr-2">Ch06.</span> <a class="text-warning" href="/ch06/content">Forward & Redirect </a>
+		</h6>
+	</li>
 </ul>
