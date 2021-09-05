@@ -30,4 +30,22 @@
 			<span class="mr-2">Ch06.</span> <a class="text-warning" href="/ch06/content">Forward & Redirect </a>
 		</h6>
 	</li>
+	
+	<li class="nav-item mb-2">
+      <h6 class="text-white">
+      	<span class="mr-2">Ch07.</span> <a class= "text-warning" href="${pageContext.request.contextPath}/ch07/content">Data Delivery</a>
+      </h6>
+   </li>
+   <li class="nav-item mb-2">
+      <h6 class="text-white">
+      	<span class="mr-2">Ch08.</span>
+      	<a class="text-warning"  href="${pageContext.request.contextPath}/ch08/content">Session Support</a>
+      </h6>
+   </li>
+   <li class="nav-item mb-2">
+      <h6 class="text-white">
+      	<span class="mr-2">Ch09.</span>
+      	<a class="text-warning"  href="${pageContext.request.contextPath}/ch09/content">Controller / fileupload multipart</a>
+      </h6>
+   </li>
 </ul>
