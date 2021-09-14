@@ -66,4 +66,16 @@
       	<a class="text-warning" href="${pageContext.request.contextPath}/ch12/content">View/ ViewResolver</a>
       </h6>
    </li>
+   <li class="nav-item mb-2">
+      <h6 class="text-white">
+      	<span class="mr-2">Ch13.</span>
+      	<a class="text-warning" href="${pageContext.request.contextPath}/ch13/content">View/DI</a>
+      </h6>
+   </li>
+   <li class="nav-item mb-2">
+      <h6 class="text-white">
+      	<span class="mr-2">Ch14.</span>
+      	<a class="text-warning" href="${pageContext.request.contextPath}/ch14/content">JDBC</a>
+      </h6>
+   </li>
 </ul>

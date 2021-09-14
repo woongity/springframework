@@ -40,7 +40,11 @@ public class Ch07Controller {
 
 		return "ch07/readData";
 	}
-
+	
+	@RequestMapping("/content")
+	public String content() {
+		return "ch07/content";
+	}
 	@RequestMapping("/readData")
 	public String readData() {
 		logger.info("실행");
